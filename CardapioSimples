@@ -1,0 +1,46 @@
+//Cardápio simples que cálcula o preço da compra. A escolha é feita através do código do produto e quantidade, porém, só é possível fazer a escolha de um produto por vez.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Código  Produto             Preço");
+    System.out.println("1       Cachorro Quente     R$4.00");
+    System.out.println("2       X-Salada            R$4.50");
+    System.out.println("3       X-Bacon             R$5.00");
+    System.out.println("4       Torrada Simples     R$2.00");
+    System.out.println("5       Refrigerante        R$1.50");
+
+    double prod1 = 4.0;
+    double prod2 = 4.5;
+    double prod3 = 5.0;
+    double prod4 = 2.0;
+    double prod5 = 1.5;
+
+    System.out.println("Escolha um produto por seu código:");
+    double esc = sc.nextDouble();
+
+    System.out.println("Agora escolha a quantidade: ");
+    double quant = sc.nextDouble();
+
+    if (esc == 1) {
+        System.out.println("O valor da compra foi de R$" + prod1 * quant);
+    }
+    else if (esc == 2){
+        System.out.println("O valor da compra foi de R$" + prod2 * quant);
+        }
+    else if (esc == 3){
+        System.out.println("O valor da compra foi de R$" + prod3 * quant);
+    }
+    else if (esc == 4){
+        System.out.println("O valor da compra foi de R$" + prod4 * quant);
+    }
+    else if (esc == 5){
+        System.out.println("O valor da compra foi de R$" + prod5 * quant);
+    }
+    sc.close();
+
+    }
+}
